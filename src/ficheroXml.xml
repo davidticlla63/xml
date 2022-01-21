@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<facturaElectronicaTasaCero xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="fichero.xsd">
+  <cabecera>
+    <nitEmisor>1234489</nitEmisor>
+    <razonSocialEmisor>prueba</razonSocialEmisor>
+    <municipio>SANTA CRUZ</municipio>
+    <telefono>73675290</telefono>
+    <numeroFactura>123456</numeroFactura>
+    <cuf>1eecd7b50eef5e5bde755ca05f735</cuf>
+    <cufd>dae91da3e083d42a3da456665b8cad2e</cufd>
+    <codigoSucursal>0</codigoSucursal>
+    <direccion>Plaza Avaroa 53</direccion>
+    <codigoPuntoVenta xsi:nil="true"/>
+    <fechaEmision>2019-01-11T19:35:36.169</fechaEmision>
+    <nombreRazonSocial>DAVID</nombreRazonSocial>
+    <codigoTipoDocumentoIdentidad>8</codigoTipoDocumentoIdentidad>
+    <numeroDocumento>4561321</numeroDocumento>
+    <complemento xsi:nil="true"/>
+    <codigoCliente>7896516</codigoCliente>
+    <codigoMetodoPago>123654</codigoMetodoPago>
+    <numeroTarjeta xsi:nil="true"/>
+    <montoTotal>150</montoTotal>
+    <codigoMoneda>1</codigoMoneda>
+    <tipoCambio>1</tipoCambio>
+    <montoTotalMoneda>1</montoTotalMoneda>
+    <leyenda>1</leyenda>
+    <usuario>1</usuario>
+    <codigoDocumentoSector>1</codigoDocumentoSector>
+  </cabecera> 
+</facturaElectronicaTasaCero>

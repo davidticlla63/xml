@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<facturaElectronicaTasaCero xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="facturaElectronicaTasaCero.xsd">
+  <cabecera>
+    <nitEmisor>12344897011</nitEmisor>
+    <razonSocialEmisor>prueba</razonSocialEmisor>
+    <municipio>SANTA CRUZ</municipio>
+    <telefono>73675290</telefono>
+    <numeroFactura>123456</numeroFactura>
+    <cuf>1eecd7b50eef5e5bde755ca05f735</cuf>
+    <cufd>dae91da3e083d42a3da456665b8cad2e</cufd>
+    <codigoSucursal>0</codigoSucursal>
+    <direccion>Plaza Avaroa 53</direccion>
+    <codigoPuntoVenta xsi:nil="true"></codigoPuntoVenta>
+    <fechaEmision>2019-01-11T19:35:36.169</fechaEmision>
+    <nombreRazonSocial>DAVID</nombreRazonSocial>
+    <codigoTipoDocumentoIdentidad>8</codigoTipoDocumentoIdentidad>
+    <numeroDocumento>4561321</numeroDocumento>
+    <complemento xsi:nil="true"></complemento>
+    <codigoCliente>7896516</codigoCliente>
+    <codigoMetodoPago>123654</codigoMetodoPago>
+    <numeroTarjeta xsi:nil="true"></numeroTarjeta>
+    <montoTotal>150</montoTotal>
+    <codigoMoneda>1</codigoMoneda>
+    <tipoCambio>1</tipoCambio>
+    <montoTotalMoneda>1</montoTotalMoneda>
+    <leyenda>1</leyenda>
+    <usuario>1</usuario>
+    <codigoDocumentoSector>1</codigoDocumentoSector>
+  </cabecera>
+  <detalle id="detalle">
+    <items>
+      <actividadEconomica>7892165</actividadEconomica>
+      <codigoProductoSin>64532</codigoProductoSin>
+      <codigoProducto>123</codigoProducto>
+      <descripcion>libro de matematicas</descripcion>
+      <cantidad>1</cantidad>
+      <unidadMedida>62</unidadMedida>
+      <precioUnitario>150</precioUnitario>
+      <montoDescuento xsi:nil="true"></montoDescuento>
+      <subTotal>150</subTotal>
+    </items>
+    <items>
+      <actividadEconomica>7892165</actividadEconomica>
+      <codigoProductoSin>64532</codigoProductoSin>
+      <codigoProducto>123</codigoProducto>
+      <descripcion>libro de matematicas</descripcion>
+      <cantidad>1</cantidad>
+      <unidadMedida>62</unidadMedida>
+      <precioUnitario>150</precioUnitario>
+      <montoDescuento xsi:nil="true"></montoDescuento>
+      <subTotal>150</subTotal>
+    </items>
+    <items>
+      <actividadEconomica>7892165</actividadEconomica>
+      <codigoProductoSin>64532</codigoProductoSin>
+      <codigoProducto>123</codigoProducto>
+      <descripcion>libro de matematicas</descripcion>
+      <cantidad>1</cantidad>
+      <unidadMedida>62</unidadMedida>
+      <precioUnitario>150</precioUnitario>
+      <montoDescuento xsi:nil="true"></montoDescuento>
+      <subTotal>150</subTotal>
+    </items>
+    <items>
+      <actividadEconomica>7892165</actividadEconomica>
+      <codigoProductoSin>64532</codigoProductoSin>
+      <codigoProducto>123</codigoProducto>
+      <descripcion>libro de matematicas</descripcion>
+      <cantidad>1</cantidad>
+      <unidadMedida>62</unidadMedida>
+      <precioUnitario>150</precioUnitario>
+      <montoDescuento xsi:nil="true"></montoDescuento>
+      <subTotal>150</subTotal>
+    </items>
+    <items>
+      <actividadEconomica>7892165</actividadEconomica>
+      <codigoProductoSin>64532</codigoProductoSin>
+      <codigoProducto>123</codigoProducto>
+      <descripcion>libro de matematicas</descripcion>
+      <cantidad>1</cantidad>
+      <unidadMedida>62</unidadMedida>
+      <precioUnitario>150</precioUnitario>
+      <montoDescuento xsi:nil="true"></montoDescuento>
+      <subTotal>150</subTotal>
+    </items>
+  </detalle>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+<SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"></SignatureMethod>
+<Reference URI="#detalle">
+<Transforms>
+<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+<Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"></Transform>
+</Transforms>
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>R7YTUBu+zoQYv0GGL0R6f/wVav/kjNHeKh9m63cnTYU=</DigestValue>
+</Reference>
+</SignedInfo>
+<SignatureValue>Z0E+LE0oibNyJcD6dW1LOYkh3hK79576puYA0lUGgzyTTQZYQZFdsmIOzVe3rOhKybcp58UP//ESJAqkZIApofJBg0Po0KL8jEWQUtGglXlzhR2K7XP5jcqT5akY8byEz/GHe9iLFFE4YuwUghICyBJEu0OHiDZucK24Us5f/UzmtW4MHo9yuueNi+GTW3exk/MwF/dRPJ7eFYfe4zJvbAymM+6/A6mOW7Y5EhhS7gdJvvDFqaLFFe+o+aY5SxdFojO3XeTkLdFzySg4iLsbz6QAzwSNkBP0K7YCJm1XXwQuIrwSq//HkrFMu2Zv7WzSeB4tSDjFTKrTONlrC4O18w==</SignatureValue>
+<KeyInfo>
+<X509Data>
+<X509Certificate>
+MIIEXzCCA0egAwIBAgIBADANBgkqhkiG9w0BAQsFADCB8jELMAkGA1UELhMCQ0kx
+FTATBgcrBgEBAQEADAgxMjM0NTY3ODETMBEGA1UEAwwKSnVhbiBQZXJlejEeMBwG
+CSqGSIb3DQEJARYPanBlcmV6QG1haWwuY29tMRgwFgYDVQQKDA9QZXJleiBBc29j
+aWFkb3MxGTAXBgNVBAsMEEdlcmVuY2lhIEdlbmVyYWwxGDAWBgNVBAwMD0dlcmVu
+dGUgR2VuZXJhbDELMAkGA1UEBhMCQk8xOzA5BgNVBA0MMlBlcnNvbmEgSnVyaWRp
+Y2EgU2VndXJpZGFkIE5vcm1hbCBGaXJtYSBBdXRvbWF0aWNhMB4XDTE5MDgwNDAw
+NDc1N1oXDTE5MTEwMjAwNDc1N1owgfIxCzAJBgNVBC4TAkNJMRUwEwYHKwYBAQEB
+AAwIMTIzNDU2NzgxEzARBgNVBAMMCkp1YW4gUGVyZXoxHjAcBgkqhkiG9w0BCQEW
+D2pwZXJlekBtYWlsLmNvbTEYMBYGA1UECgwPUGVyZXogQXNvY2lhZG9zMRkwFwYD
+VQQLDBBHZXJlbmNpYSBHZW5lcmFsMRgwFgYDVQQMDA9HZXJlbnRlIEdlbmVyYWwx
+CzAJBgNVBAYTAkJPMTswOQYDVQQNDDJQZXJzb25hIEp1cmlkaWNhIFNlZ3VyaWRh
+ZCBOb3JtYWwgRmlybWEgQXV0b21hdGljYTCCASIwDQYJKoZIhvcNAQEBBQADggEP
+ADCCAQoCggEBAKnLY19+5tSfOgitSXYguJ4PS8d3D/GhZYJLVbgb6jAj3FIi2vsc
+6KQ3LRcoews3DyhGJpu2Y+p8sgA93GrOg2+6yl3QuU27eJnIYDehy2SKKzF9K56h
+3Fp3sPAqJ5pVgCgf7yrSJdCs8kerFcx15/8BToxzLrEkplsr1MaYj3tbd4UNsueP
+o6qDMHKfOF94Nsn1cze0AGBE4GHvgsGyWLi/j7ON/gj+ydpt0iRamtpQO8YfOckH
+psNysdf36MMCH9j358ZnS71+WR6olzGAPmlQiuqQcijxFoX3q9LXrgopKuaGKZcU
+hNPu0g5PhIeQPx91egEfYxZlozV4W0wrpHsCAwEAATANBgkqhkiG9w0BAQsFAAOC
+AQEAbxwMqQMuKh8QuXCaF9+WVQbaeA94dXhL/0aF8rJXHcOxHW1MEpURG/YzzwaY
+Aok6GnV2wXO+ScpTCuB+z2r1jbJ/g0LE76ROfsBwMWkYVwGYD2m+lQKuUvnmqDEz
+RLExOt2+XUtMmfDdeZvFm1KfWeRa2hBPhrbBWDz1v4fWFt9HgqgB8m3CwXiH/6fV
+3gBam7AU8sdViFbs67eAypt+iWL1Ov2DxSqky6wUIOFkFC8SbuQlCncLSG2hImqD
+IXop2N0UXZBvfX1SW4kSrcTJcWGa5KHb+/zo9JvLl0J/M4ijyQDRt9YoGsnd0sli
+FiNfrHoolX7UIulQUXOUna8jQg==</X509Certificate>
+</X509Data>
+</KeyInfo>
+</Signature></facturaElectronicaTasaCero>
