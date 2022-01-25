@@ -2,16 +2,17 @@ import app from "./app";
 import "@babel/polyfill";
 import  * as cuf from '../src/utils/cuf'
 import  * as fxmlFile from '../src/utils/xml'
+import * as cifrado from '../src/utils/md5_sha256'
 
 
 
 
 var xml2js = require('xml2js');
 var stringcuf=cuf.generarCuf('123456789','20190113163721231',0,1,1,1,1,1,0)
-console.log(stringcuf)
+console.log('CUF: '+stringcuf)
 
 
-console.log(cuf.Base16(stringcuf))
+console.log('CUF BASE 16: '+cuf.Base16(stringcuf))
 
 
 
@@ -85,7 +86,36 @@ try {
 var xml= fxmlFile.createXml();
 //console.log(fxmlFile.firmadoDigitalXml(xml));
 
+var fileCifrado= cifrado.fileHash('facturaElectronicaTasaCero.xml','sha256');
+console.log('XML CIFRADO CON SHA256: '+fileCifrado);
 
+
+var fileCifrado= cifrado.fileHashDescipher(fileCifrado);
+console.log('dato: '+fileCifrado);
+
+/* const crypto = require('crypto');
+const fs = require('fs');
+
+const fileBuffer = fs.readFileSync('./package.json');
+const hashSum = crypto.createHash('sha256');
+hashSum.update(fileBuffer);
+
+const hex = hashSum.digest('hex');
+
+console.log(hex); */
+
+
+/* 
+var crypto = require('crypto');
+
+var hash = crypto.createHash('sha256');
+
+var code = 'bacon';
+
+code = hash.update(code);
+code =hash.digest('hex');
+
+console.log(code); */
 async function main() {
     //conectar();
 
