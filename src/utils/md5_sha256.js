@@ -4,11 +4,11 @@ var crypto = require('crypto')
 export function fileHash(filename, algorithm) {
   /*   const fileBuffer = fs.readFileSync('./package.json');
   const hashSum = crypto.createHash('sha256'); */
-  const secret = 'erp360';
+  const Securitykey = 'erp360';
   const fileBuffer = fs.readFileSync(filename);
 
   //console.log(fileBuffer)
-  const hashSum = crypto.createHash(algorithm,secret);
+  const hashSum = crypto.createHash(algorithm,Securitykey);
   //hashSum.update(fileBuffer);
 
   const hex = hashSum.digest('hex');
@@ -19,7 +19,8 @@ export function fileHash(filename, algorithm) {
 export function fileHashDescipher(encryptedData){
   const Securitykey = 'erp360';
   const algorithm='sha256';
-  const decipher = crypto.createDecipheriv(algorithm, Securitykey);
+  const resizedIV = Buffer.allocUnsafe(16);
+  const decipher = crypto.createDecipheriv(algorithm, Securitykey,resizedIV);
 
 let decryptedData = decipher.update(encryptedData, "hex", "utf-8");
 

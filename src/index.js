@@ -5,6 +5,9 @@ import  * as fxmlFile from '../src/utils/xml'
 import * as cifrado from '../src/utils/md5_sha256'
 
 
+const validator = require('xsd-schema-validator');
+const express = require('express');
+
 
 
 var xml2js = require('xml2js');
@@ -84,14 +87,14 @@ try {
 
 /**  ejemplo de xml */
 var xml= fxmlFile.createXml();
-//console.log(fxmlFile.firmadoDigitalXml(xml));
+console.log(fxmlFile.firmadoDigitalXml(xml));
 
 var fileCifrado= cifrado.fileHash('facturaElectronicaTasaCero.xml','sha256');
 console.log('XML CIFRADO CON SHA256: '+fileCifrado);
 
 
-var fileCifrado= cifrado.fileHashDescipher(fileCifrado);
-console.log('dato: '+fileCifrado);
+ //var fileCifrado= cifrado.fileHashDescipher(fileCifrado);
+/*console.log('dato: '+fileCifrado); */
 
 /* const crypto = require('crypto');
 const fs = require('fs');
@@ -116,6 +119,46 @@ code = hash.update(code);
 code =hash.digest('hex');
 
 console.log(code); */
+
+const validateRouter = express.Router();
+/**
+ * Checks if the users.xml file is valid using the users.xsd schema
+ */
+validateRouter.get('/', (req, res) => {
+    try {
+        validator.validateXML({file: 'users.xml'}, 'users.xsd', (error, result) => {
+
+        console.log(result)
+           /*  if (result.valid) {
+                res.write('<div>XML Validation was correct</div>');
+            } else {
+                res.write('<div>');
+                res.write('<div>XML validation failed.</div>');
+                res.write('<div>Error: ' + error + '</div>');
+                res.write('</div>');
+            } */
+            res.end();
+        });
+    } catch (error) {
+        
+    }
+    
+});
+
+//Sets the /validate path to use the previous validateRouter
+app.use('/validate', validateRouter);
+
+
+/* var xsd = require('libxml-xsd');
+ 
+var schema = xsd.parse('<?xml version="1.0" encoding="UTF-8"?><foo xmlns="http://example.com/XMLSchema/1.0"></foo>');
+ 
+var validationErrors = schema.validate('<?xml version="1.0" encoding="utf-8" ?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://example.com/XMLSchema/1.0" targetNamespace="http://example.com/XMLSchema/1.0" elementFormDefault="qualified" attributeFormDefault="unqualified"><xs:element name="foo"></xs:element></xs:schema>');
+
+console.log(validationErrors) */
+
+
+
 async function main() {
     //conectar();
 
